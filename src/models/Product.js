@@ -10,19 +10,19 @@ const s3 = new aws.S3();
 const ProductSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true,
+        required: false,
     },
     price: {
         type: String,
-        required: true,
+        required: false,
     },
     description: {
         type: String,
-        required: true,
+        required: false,
     },
     urlContact: {
         type: String,
-        required: true,
+        required: false,
     },
     createdAt: {
         type: Date,

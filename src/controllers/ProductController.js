@@ -18,11 +18,18 @@ module.exports = {
 
     async store(req, res) {
         const { originalname: name, size, key, location: url = '' } = req.file;
-        const { title: title, description: description } = req.body;
+        const { 
+            title: title,
+            description: description,
+            price: price,
+            urlContact: urlContact
+        } = req.body;
     
         const post = await Product.create({
             title,
             description,
+            price,
+            urlContact,
             image: {
                 name,
                 size,
